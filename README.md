@@ -18,7 +18,7 @@ Once cloned:
 
 `npm install` — Installs node_modules folder for dependencies
 
-`npx install playwright` — Installs everything needed to run PlayWright
+`npx playwright install` — Installs everything needed to run PlayWright
 
 ### Running Frontend
 `npm start` — This starts a local server at port 8000 that compiles your code in real time.
