@@ -48,24 +48,19 @@ const Mainframe = ({ projects }: SelectProjects) => {
       {/* Sidebar */}
       <div className="sidebar">
         <ul className="flex flex-col space-y-8">
-          <li className="flex items-center gap-4 cursor-pointer p-3" onClick={() => scrollToSection(homeRef)}>
-            <Home size={50} />
+          <li className="sidebar-box" onClick={() => scrollToSection(homeRef)}>
             <span className="text-lg">Home</span>
           </li>
-          <li className="flex items-center gap-4 cursor-pointer p-3" onClick={() => scrollToSection(profileRef)}>
-            <User size={50} />
+          <li className="sidebar-box" onClick={() => scrollToSection(profileRef)}>
             <span className="text-lg">Profile</span>
           </li>
-          <li className="flex items-center gap-4 cursor-pointer p-3" onClick={() => scrollToSection(projectsRef)}>
-            <Boxes size={50} />
+          <li className="sidebar-box" onClick={() => scrollToSection(projectsRef)}>
             <span className="text-lg">Projects</span>
           </li>
-          <li className="flex items-center cursor-pointer p-3" onClick={() => scrollToSection(contactRef)}>
-            <Nfc size={50} />
+          <li className="sidebar-box" onClick={() => scrollToSection(contactRef)}>
             <span className="text-lg">Contact</span>
           </li>
-          <li className="flex items-center cursor-pointer p-3" onClick={toggleMode}>
-            <Moon size={50} />
+          <li className="sidebar-box" onClick={toggleMode}>
             <span className="text-lg">{darkMode ? "Light Mode" : "Dark Mode"}</span>
           </li>
         </ul>

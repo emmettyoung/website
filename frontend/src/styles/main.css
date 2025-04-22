@@ -1,14 +1,10 @@
 .sidebar {
-  position: fixed;
-  top: 0;
-  left: 15;
-  width: 100%;           
-  height: auto;         
+  justify-content: center;
+  position: flex;
   display: flex;        
   flex-direction: row;   
   align-items: center;  
   padding: 10px 20px;
-  background-color: #e1d7d7; /* Optional: visual background */
   z-index: 100;
   gap: 2rem;
 }
@@ -21,13 +17,22 @@
   padding: 0;
 }
 
+.sidebar-box {
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+  font-size: 25px;
+  font-family: 'Courier New', Courier, monospace;
+}
+.sidebar-box:hover {
+  transform: scale(1.10);
+  text-decoration: underline;
+}
 .profile-container,
 .project-container,
 .contact-container {
     position: relative; /* Ensure elements stay in place */
-    left: 57%;
+    left: 50%;
     transform: translateX(-50%);
-    width: 700px;
     max-width: 80%;
     align-items: center;
     font-family: 'Courier New', Courier, monospace;
@@ -35,7 +40,7 @@
 
 .profile-header {
     border-top: 2px solid gray;
-    margin-top: 120px; 
+    margin-top: 200px; 
     position: relative;
     font-size: 35px;
     font-family: 'Courier New', Courier, monospace;
@@ -86,7 +91,6 @@
     font-weight: bold;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
-    width: auto;
     text-align: center; /* Ensure text elements are centered */
 }
 
@@ -94,10 +98,11 @@
     transform: scale(1.05);
 }
 
+
 .homepage-text {
     position: absolute;
-    top: 51%;        /* vertically center-ish */
-    left: 50%;       /* horizontally center */
+    top: 53%;        /* vertically center-ish */
+    left: 45%;       /* horizontally center */
     transform: translate(-50%, -50%); /* true center */
     font-family: cursive;
     font-size: 28px;
@@ -105,34 +110,34 @@
     z-index: 15; /* make sure it's above the images */
     pointer-events: none;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    transform: rotate(-7deg);
 }
   
 .image-container {
     position: relative; /* Enables positioning of child elements */
     display: flex;
     justify-content: center;
-    gap: 40px;
     padding-bottom: 150px; /* optional spacing below images */
-    left: 10%;
     max-width: 100%;
   }
   
   .sunset-image {
     transform: rotate(-10deg) scale(0.9);
     position: relative;
-    top: 20px; /* move higher */
+    top: 0px; /* move higher */
     left: -40px; /* move slightly left */
   }
   
   .tulum-image {
-    transform: rotate(-20deg) scale(0.9);
+    transform: rotate(-10deg) scale(0.9);
     position: relative;
+    top: -30px
   }
   
   .overlay-australia {
     transform: rotate(10deg) scale(0.9);
     position: absolute;
-    top: 320px; /* move it up */
+    top: 280px; /* move it up */
     left: 10%;  /* adjust this to center */
     z-index: 10;
     pointer-events: none;
@@ -141,7 +146,7 @@
   .overlay-lake {
     transform: rotate(-15deg) scale(0.9);
     position: absolute;
-    top: 320px; /* move it up */
+    top: 290px; /* move it up */
     left: 50%;  /* adjust this to center */
     z-index: 10;
     pointer-events: none;
@@ -152,8 +157,29 @@
     margin-bottom: 8px; /* optional spacing between links */
   }
 
-  html, body {
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-  }
+.jakarta {
+  transform: rotate(15deg);
+  top: 20px; /* move it up */
+  pointer-events: none;
+  z-index: 10;
+  position: absolute;
+  left: 80%;
+}
+
+.icy {
+  transform: rotate(10deg);
+  position: absolute;
+  left: 80%;
+  pointer-events: none;
+  z-index: 20;
+  top: 280px; /* move it up */
+}
+
+.LA {
+  transform: rotate(10deg);
+  position: absolute;
+  left: 2%;
+  pointer-events: none;
+  z-index: 20;
+  top: 15px; /* move it up */
+}
