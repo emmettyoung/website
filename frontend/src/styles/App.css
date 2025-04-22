@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.app-layout {
+  display: flex;
+  flex: 1; /* Takes remaining vertical space */
+}
+
+.main-content {
+  flex: 1;
+  padding: 0px;
+  margin-left: 200px; /* Matches sidebar width */
+}
+

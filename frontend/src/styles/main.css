@@ -1,0 +1,159 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 15;
+  width: 100%;           
+  height: auto;         
+  display: flex;        
+  flex-direction: row;   
+  align-items: center;  
+  padding: 10px 20px;
+  background-color: #e1d7d7; /* Optional: visual background */
+  z-index: 100;
+  gap: 2rem;
+}
+.sidebar ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-container,
+.project-container,
+.contact-container {
+    position: relative; /* Ensure elements stay in place */
+    left: 57%;
+    transform: translateX(-50%);
+    width: 700px;
+    max-width: 80%;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.profile-header {
+    border-top: 2px solid gray;
+    margin-top: 120px; 
+    position: relative;
+    font-size: 35px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.project-header {
+    margin-top: 80px; 
+    position: relative;
+    font-size: 35px;
+    font-family: 'Courier New', Courier, monospace;
+    border-top: 2px solid gray;
+}
+.project-container { 
+    margin-top: 50px; 
+    margin-bottom: 30px;
+}
+
+.contact-container { 
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.content-container {
+    width: 100%; /* Adjust width dynamically */
+    max-width: 100%;
+    height: 100%; /* Full viewport height */
+    overflow-y: scroll; /* Enables scrolling through sections */
+    scroll-snap-type: y mandatory; /* Enables smooth section snapping */
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+}
+
+.section {
+    height: 100vh; /* Makes each section take up the full viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start; /* Each section will snap into place */
+}
+
+
+.project-box {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    width: auto;
+    text-align: center; /* Ensure text elements are centered */
+}
+
+  .project-box:hover {
+    transform: scale(1.05);
+}
+
+.homepage-text {
+    position: absolute;
+    top: 51%;        /* vertically center-ish */
+    left: 50%;       /* horizontally center */
+    transform: translate(-50%, -50%); /* true center */
+    font-family: cursive;
+    font-size: 28px;
+    color: #000000;
+    z-index: 15; /* make sure it's above the images */
+    pointer-events: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+  
+.image-container {
+    position: relative; /* Enables positioning of child elements */
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding-bottom: 150px; /* optional spacing below images */
+    left: 10%;
+    max-width: 100%;
+  }
+  
+  .sunset-image {
+    transform: rotate(-10deg) scale(0.9);
+    position: relative;
+    top: 20px; /* move higher */
+    left: -40px; /* move slightly left */
+  }
+  
+  .tulum-image {
+    transform: rotate(-20deg) scale(0.9);
+    position: relative;
+  }
+  
+  .overlay-australia {
+    transform: rotate(10deg) scale(0.9);
+    position: absolute;
+    top: 320px; /* move it up */
+    left: 10%;  /* adjust this to center */
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  .overlay-lake {
+    transform: rotate(-15deg) scale(0.9);
+    position: absolute;
+    top: 320px; /* move it up */
+    left: 50%;  /* adjust this to center */
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  a {
+    display: block;
+    margin-bottom: 8px; /* optional spacing between links */
+  }
+
+  html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
