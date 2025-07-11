@@ -1,4 +1,11 @@
 import { useEffect, useState } from "react";
+import sunset from './japan-sunset.jpeg';
+import tulum from './tulum.jpeg';
+import australia from './australia.jpeg';
+import lake from './lake.jpeg';
+import jakarta from './jakarta.jpeg';
+import icy from './icy.jpeg';
+import LA from './LA.jpeg';
 
 export interface HomePage {
     welcomeText: string;
@@ -25,15 +32,15 @@ export function HomePage({ welcomeText = "Welcome to my website!" }: HomePage) {
     return (
         <div>
             <div className="image-container">
-                <img className="sunset-image" src="src/components/japan-sunset.jpeg" alt="Sunset" width={450} height={300}/>
-                <img className="tulum-image" src="src/components/tulum.jpeg" alt="Tulum" width={210} height={280} />
-                <p className="homepage-text">{displayed}</p>
-                <img className="overlay-australia" src="src/components/australia.jpeg" alt="australia" width={450} height={300}/>
-                <img className="overlay-lake" src="src/components/lake.jpeg" alt="lake" width={360} height={270}/>
-                <img className="jakarta" src="src/components/jakarta.jpeg" alt="jakarta" width={210} height={280}/>
-                <img className="icy" src="src/components/icy.jpeg" alt="icy" width={210} height={280}/>
-                <img className="LA" src="src/components/LA.jpeg" alt="LA" width={210} height={280}/>
+              <img className="sunset-image" src={sunset} alt="Sunset" width={450} height={300} />
+              <img className="tulum-image" src={tulum} alt="Tulum" width={210} height={280} />
+              <img className="overlay-australia" src={australia} alt="Australia" width={450} height={300} />
+              <img className="overlay-lake" src={lake} alt="Lake" width={360} height={270} />
+              <img className="jakarta" src={jakarta} alt="Jakarta" width={210} height={280} />
+              <img className="icy" src={icy} alt="Icy" width={210} height={280} />
+              <img className="LA" src={LA} alt="LA" width={210} height={280} />
             </div>
+            <p className="homepage-text">{displayed}</p>
         </div>
     )
 }
