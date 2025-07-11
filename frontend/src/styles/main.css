@@ -36,11 +36,13 @@
     max-width: 80%;
     align-items: center;
     font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 100px;
+    background-image: "src/components/website-profile-transparent.jpeg";
 }
 
 .profile-header {
     border-top: 2px solid gray;
-    margin-top: 200px; 
+    margin-top: 250px; 
     position: relative;
     font-size: 35px;
     font-family: 'Courier New', Courier, monospace;
@@ -79,7 +81,6 @@
     scroll-snap-align: start; /* Each section will snap into place */
 }
 
-
 .project-box {
     display: flex;
     flex-direction: column; /* Stack items vertically */
@@ -98,13 +99,12 @@
     transform: scale(1.05);
 }
 
-
 .homepage-text {
     position: absolute;
-    top: 53%;        /* vertically center-ish */
-    left: 45%;       /* horizontally center */
+    top: 51%;        /* vertically center-ish */
+    left: 43%;       /* horizontally center */
     transform: translate(-50%, -50%); /* true center */
-    font-family: cursive;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 28px;
     color: #000000;
     z-index: 15; /* make sure it's above the images */
@@ -113,6 +113,11 @@
     transform: rotate(-7deg);
 }
   
+a {
+  display: block;
+  margin-bottom: 8px; /* optional spacing between links */
+}
+
 .image-container {
     position: relative; /* Enables positioning of child elements */
     display: flex;
@@ -120,66 +125,87 @@
     padding-bottom: 150px; /* optional spacing below images */
     max-width: 100%;
   }
-  
-  .sunset-image {
-    transform: rotate(-10deg) scale(0.9);
-    position: relative;
-    top: 0px; /* move higher */
-    left: -40px; /* move slightly left */
-  }
-  
-  .tulum-image {
-    transform: rotate(-10deg) scale(0.9);
-    position: relative;
-    top: -30px
-  }
-  
-  .overlay-australia {
-    transform: rotate(10deg) scale(0.9);
-    position: absolute;
-    top: 280px; /* move it up */
-    left: 10%;  /* adjust this to center */
-    z-index: 10;
-    pointer-events: none;
-  }
 
-  .overlay-lake {
-    transform: rotate(-15deg) scale(0.9);
-    position: absolute;
-    top: 290px; /* move it up */
-    left: 50%;  /* adjust this to center */
-    z-index: 10;
-    pointer-events: none;
-  }
 
-  a {
-    display: block;
-    margin-bottom: 8px; /* optional spacing between links */
-  }
 
-.jakarta {
-  transform: rotate(15deg);
-  top: 20px; /* move it up */
-  pointer-events: none;
-  z-index: 10;
-  position: absolute;
-  left: 80%;
+@keyframes fallIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px) rotate(0deg) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(var(--rotate, 0deg)) scale(0.9);
+  }
 }
 
+.sunset-image,
+.tulum-image,
+.overlay-australia,
+.overlay-lake,
+.jakarta,
+.icy,
+.LA {
+animation: fallIn 1.6s ease-out forwards;
+opacity: 0; /* Ensure they're hidden before animating */
+}
+
+/* Staggered delays for cool effect */
+.sunset-image {
+animation-delay: 0.1s;
+--rotate: -10deg;
+position: relative;
+top: 0px; /* move higher */
+left: -40px; /* move slightly left */
+}
+.tulum-image {
+animation-delay: 0.2s;
+--rotate: -10deg;
+position: relative;
+top: -30px
+}
+.overlay-australia {
+animation-delay: 0.3s;
+--rotate: 10deg;
+position: absolute;
+top: 280px; /* move it up */
+left: 10%;  /* adjust this to center */
+z-index: 10;
+pointer-events: none;
+}
+.overlay-lake {
+animation-delay: 0.4s;
+--rotate: -15deg;
+position: absolute;
+top: 290px; /* move it up */
+left: 50%;  /* adjust this to center */
+z-index: 10;
+pointer-events: none;
+}
+.jakarta {
+animation-delay: 0.5s;
+--rotate: 15deg;
+top: 20px; /* move it up */
+pointer-events: none;
+z-index: 10;
+position: absolute;
+left: 80%;
+}
 .icy {
-  transform: rotate(10deg);
-  position: absolute;
+animation-delay: 0.6s;
+--rotate: 10deg;
+position: absolute;
   left: 80%;
   pointer-events: none;
   z-index: 20;
-  top: 280px; /* move it up */
+  top: 280px; 
 }
-
 .LA {
-  transform: rotate(10deg);
-  position: absolute;
+animation-delay: 0.7s;
+--rotate: 10deg;
+position: absolute;
   left: 2%;
   pointer-events: none;
   z-index: 20;
-  top: 15px; /* move it up */
+  top: 15px;
 }

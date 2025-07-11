@@ -25,15 +25,21 @@ export function SelectProfileLinks({ profileLinks }: profileLinksProps) {
   return (
     <div className="profile-container">
       <div className="profile">
-        <a href={profileLinks.transcript} className="text-blue-500 underline hover:text-blue-700">
+      <a href={profileLinks.transcript} target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-500 underline">
           <FileUser size={25}/>
           Transcript
         </a>
-        <a href={profileLinks.resume} className="text-blue-500 underline hover:text-blue-700">
+        <a href={profileLinks.resume} target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-500 underline">
           <FileUser size={25}/>
           Resume
         </a>
-        <a href={profileLinks.linkedIn} className="text-blue-500 underline hover:text-blue-700">
+        <a href={profileLinks.linkedIn} target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-500 underline">
           <FileUser size={25}/>
           LinkedIn
         </a>

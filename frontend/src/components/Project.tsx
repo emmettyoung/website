@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import '../styles/main.css';
 import { ProjectHistory } from './projectHistory';
-import { projectLayout, projectList, SelectProject } from './SelectProject';
+import { noncodingProjects, projectLayout, projectList, SelectProject } from './SelectProject';
 
 /* 
   You'll want to expand this component (and others) for the sprints! Remember 
@@ -23,6 +23,7 @@ export default function Project() {
         </div>
         <hr />
         <SelectProject setSelectedProject={setSelectedProject} projects={projectList}/>
+        <SelectProject setSelectedProject={setSelectedProject} projects={noncodingProjects}/>
       </div>
     </div>
   );
