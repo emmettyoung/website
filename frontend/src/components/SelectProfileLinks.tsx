@@ -14,8 +14,8 @@ export interface profileLinksProps {
 }
 
 export const profileLinks: personalLinks = {
-  transcript: "https://drive.google.com/file/d/1FssQ-pJNh_1ppONVf4sNCKOJvwUpexx6/view?usp=sharing",
-  resume: "https://drive.google.com/file/d/180tIF6VD-Lg-8CfokDctu9BkB9vftJ47/view?usp=sharing",
+  transcript: "https://drive.google.com/file/d/1A80N7sE3kjA3KYbzSf7O6WjV2knMf9hm/view?usp=sharing",
+  resume: "https://drive.google.com/file/d/1lUiTor7cYy5V0rAvlA1EJt7Wcd9W8kxo/view?usp=sharing",
   linkedIn: "https://www.linkedin.com/in/emmett-young-79870a255/",
   email: "emmett_young@brown.edu",
   phone: "8025981630"
