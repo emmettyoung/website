@@ -287,3 +287,24 @@ position: absolute;
     margin: 20px 0;
   }
 }
+@media (max-width: 600px) and (orientation: portrait) {
+  .homepage-text {
+    position: absolute;
+    top: 25%; /* Bring it higher on taller screens */
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-5deg);
+    font-size: 22px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) and (orientation: landscape) {
+  .homepage-text {
+    position: absolute;
+    top: 40%; /* Push it slightly lower for wide short screens */
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-5deg);
+    font-size: 20px;
+    text-align: center;
+  }
+}
