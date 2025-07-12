@@ -221,17 +221,24 @@ position: absolute;
     width: 180px;
     max-width: 100%;
     height: auto;
+    left: 60%;
   }
   .sunset-image {
     width: 225px;
     max-width: 100%;
     height: auto;
   }
-  .icy, .jakarta, .tulum-image {
+  .icy, .jakarta {
     width: 110px;
     max-width: 100%;
     height: auto;
     left: 70%;
+  }
+  .tulum-image{
+    width: 110px;
+    max-width: 100%;
+    height: auto;
+    left: 100%;
   }
   .LA {
     width: 130px;
@@ -244,7 +251,7 @@ position: absolute;
     width: 225px;
     max-width: 100%;
     height: auto;
-    left: 15%;
+    left: 30%;
   }
   .homepage-text {
     position: absolute;
@@ -252,6 +259,9 @@ position: absolute;
     left: 35%;       /* horizontally center */
     transform: translate(-50%, -50%); /* true center */
     font-size: 20px;
+    transform: translate(-50%, -50%); /* true center */
+    transform: rotate(-7deg);
+    z-index: 15;
 }
 }
 
