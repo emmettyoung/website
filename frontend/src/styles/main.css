@@ -263,7 +263,7 @@ position: absolute;
     top: 230px;
   }
   .homepage-text {
-    position: absolute;
+    position: flex;
     top: 32%;        /* vertically center-ish */
     left: 30%;       /* horizontally center */
     transform: translate(-50%, -50%); /* true center */
@@ -275,9 +275,6 @@ position: absolute;
   }
   .sidebar {
     transform: scale(.8)
-  }
-  .image-container {
-    overflow-x: auto;
   }
 }
 
