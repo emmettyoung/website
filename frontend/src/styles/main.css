@@ -213,8 +213,18 @@ position: absolute;
 
 @media (max-width: 600px) and (orientation: portrait) {
   #root {
-    transform: scale(0.1);
+    transform: none;
     transform-origin: top center;
+    max-width: fit-content;
+  }
+  .sunset-image,
+  .tulum-image,
+  .overlay-australia,
+  .overlay-lake,
+  .jakarta,
+  .icy,
+  .LA {
+    transform: scale(.2);
   }
 }
 
