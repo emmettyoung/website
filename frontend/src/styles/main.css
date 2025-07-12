@@ -217,17 +217,20 @@ position: absolute;
     transform-origin: top center;
     max-width: 400px;
   }
-  .sunset-image,
-  .tulum-image,
-  .overlay-australia,
-  .overlay-lake,
-  .jakarta,
-  .icy,
-  .LA {
-    width: 150px;
+  .overlay-lake {
+    width: 180px;
     max-width: 100%;
     height: auto;
-
+  }
+  .overlay-australia, .sunset-image {
+    width: 225px;
+    max-width: 100%;
+    height: auto;
+  }
+  .LA, .icy, .jakarta, .tulum-image {
+    width: 105px;
+    max-width: 100%;
+    height: auto;
   }
 }
 
