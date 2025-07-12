@@ -1,4 +1,4 @@
-import { Boxes, Home, Moon, Nfc, User, FileUser } from "lucide-react";
+import { FileUser } from "lucide-react";
 
 
 export interface personalLinks {

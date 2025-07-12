@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Emmett Young — Portfolio</title>
     <link rel="stylesheet" href="src/styles/main.css" type="text/css" />
 
@@ -20,5 +21,23 @@
     <noscript>This example requires JavaScript to run.</noscript>
     <div id="root"></div>
     <script type="module" src="src/index.tsx"></script>
+
+    <!-- Orientation-aware zoom adjustment -->
+    <script>
+      function updateViewportZoom() {
+        const viewport = document.querySelector("meta[name=viewport]");
+        const isPortrait = window.matchMedia("(orientation: portrait)").matches;
+
+        if (viewport) {
+          viewport.setAttribute("content", isPortrait
+            ? "width=device-width, initial-scale=1.2"
+            : "width=device-width, initial-scale=1.0"
+          );
+        }
+      }
+
+      updateViewportZoom();
+      window.addEventListener("resize", updateViewportZoom);
+    </script>
   </body>
 </html>

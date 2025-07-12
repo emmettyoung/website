@@ -290,7 +290,7 @@ position: absolute;
 @media (max-width: 600px) and (orientation: portrait) {
   .homepage-text {
     position: absolute;
-    top: 5%; /* Bring it higher on taller screens */
+    top: -20%; 
     left: 50%;
     transform: translate(-50%, -50%) rotate(-5deg);
     font-size: 22px;
