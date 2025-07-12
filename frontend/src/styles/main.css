@@ -272,7 +272,18 @@ position: absolute;
     transform: rotate(-7deg);
     z-index: 15;
     max-width: 200px;
-}
+  }
+  .sidebar {
+    justify-content: center;
+    position: flex;
+    display: flex;        
+    flex-direction: row;   
+    align-items: center;  
+    padding: 10px 20px;
+    z-index: 100;
+    gap: 2rem;
+    max-width: fit-content;
+  } 
 }
 
 @media (max-width: 600px) and (orientation: landscape) {
