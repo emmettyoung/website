@@ -238,21 +238,22 @@ position: absolute;
   }
   .jakarta {
     width: 110px;
-    left: 80%;
+    left: 75%;
     top: 30px;
   }
   .icy {
     width: 110px;
-    left: 80%;
+    left: 75%;
     top: 150px;
   }
   .tulum-image{
     width: 110px;
+    left: 20px
   }
   .LA {
     width: 130px;
     top: 35%;
-    right: -20px;
+    left: -20px;
   }
   .overlay-australia {
     width: 225px;
