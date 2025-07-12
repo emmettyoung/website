@@ -225,7 +225,7 @@ position: absolute;
   .LA {
     max-width: 100%;
     height: auto;
-    top: 20px;
+    top: 30px;
     right: 10px;
   }
   .overlay-lake {
@@ -248,7 +248,9 @@ position: absolute;
   }
   .tulum-image{
     width: 110px;
-    right: 20px
+    right: 20px;
+    top: 0px;
+    --rotate: -5deg;
   }
   .LA {
     width: 130px;
