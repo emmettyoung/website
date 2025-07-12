@@ -316,10 +316,11 @@ position: absolute;
     margin: 0;
     opacity: 1;
     animation: none;
+    left: 15px;
   }
 
   #root {
-    transform: scale(0.5);
+    transform: scale(0.2);
     transform-origin: top center;
   }
 }
