@@ -263,7 +263,7 @@ position: absolute;
     top: 230px;
   }
   .homepage-text {
-    position: flex;
+    position: relative;
     top: 32%;        /* vertically center-ish */
     left: 30%;       /* horizontally center */
     transform: translate(-50%, -50%); /* true center */
