@@ -316,11 +316,10 @@ position: absolute;
     margin: 0;
     opacity: 1;
     animation: none;
-    transform: rotate(var(--rotate, 0deg));
   }
 
   #root {
-    transform: scale(0.8);
+    transform: scale(0.5);
     transform-origin: top center;
   }
 }
