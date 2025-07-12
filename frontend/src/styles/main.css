@@ -288,27 +288,34 @@ position: absolute;
   }
 }
 @media (max-width: 600px) and (orientation: portrait) {
-  .homepage-text {
-    position: absolute;
-    top: 15%; 
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-5deg);
-    font-size: 22px;
-    text-align: center;
-  }
-  body {
-    transform: scale(1.05); /* or try 1.1 */
+  #root {
+    transform: scale(0.9);
     transform-origin: top center;
   }
 }
 
 @media (max-width: 600px) and (orientation: landscape) {
+  .sunset-image,
+  .tulum-image,
+  .overlay-australia,
+  .overlay-lake,
+  .jakarta,
+  .icy,
+  .LA {
+    position: static !important;
+    opacity: 1 !important;
+    animation: none !important;
+    width: 80vw;
+    max-width: 300px;
+    margin: 10px 0;
+    transform: none !important;
+  }
+
   .homepage-text {
-    position: absolute;
-    top: 40%; /* Push it slightly lower for wide short screens */
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-5deg);
+    position: static;
+    transform: none;
     font-size: 20px;
     text-align: center;
+    margin: 20px 0;
   }
 }
