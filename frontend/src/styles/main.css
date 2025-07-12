@@ -221,7 +221,7 @@ position: absolute;
     width: 180px;
     max-width: 100%;
     height: auto;
-    left: 60%;
+    left: 70%;
   }
   .sunset-image {
     width: 225px;
@@ -238,7 +238,7 @@ position: absolute;
     width: 110px;
     max-width: 100%;
     height: auto;
-    left: 100%;
+    left: 0%;
   }
   .LA {
     width: 130px;
@@ -251,7 +251,7 @@ position: absolute;
     width: 225px;
     max-width: 100%;
     height: auto;
-    left: 30%;
+    left: 60%;
   }
   .homepage-text {
     position: absolute;
