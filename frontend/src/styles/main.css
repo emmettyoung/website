@@ -276,6 +276,12 @@ position: absolute;
   .sidebar {
     transform: scale(.8)
   }
+  .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: hidden;
+  }
 }
 
 @media (max-width: 600px) and (orientation: landscape) {
