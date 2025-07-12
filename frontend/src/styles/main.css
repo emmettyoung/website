@@ -216,13 +216,6 @@ position: absolute;
     transform: none;
     transform-origin: top center;
   }
-  .image-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    overflow-x: hidden;
-  }
   .sunset-image,
   .tulum-image,
   .overlay-australia,
@@ -255,7 +248,7 @@ position: absolute;
   }
   .tulum-image{
     width: 110px;
-    right: 30px;
+    right: 50px;
     top: 0px;
     --rotate: -5deg;
   }
