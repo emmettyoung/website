@@ -52,7 +52,7 @@ export const noncodingProjects: projectLayout[] = [
     {
         title: "The Impacts of AI",
         description: "This is a report that analyzes and compares the impacts of AI on society with the impacts of the assembly line",
-        link: "paste here"
+        link: "https://drive.google.com/file/d/1Fi9EHADkr325yxNWyqus2Vvkl2PaRS8Y/view?usp=sharing"
     }
 ]
 
