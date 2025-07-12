@@ -224,7 +224,10 @@ position: absolute;
   .jakarta,
   .icy,
   .LA {
-    transform: scale(.01);
+    width: 100px;
+    max-width: 100%;
+    height: auto;
+
   }
 }
 
