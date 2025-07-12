@@ -302,13 +302,13 @@ position: absolute;
   .jakarta,
   .icy,
   .LA {
-    position: static !important;
-    opacity: 1 !important;
-    animation: none !important;
+    position: static;
+    opacity: 1;
+    animation: none;
     width: 80vw;
-    max-width: 300px;
+    max-width: 400px;
     margin: 10px 0;
-    transform: none !important;
+    transform: scale(.8);
   }
 
   .homepage-text {
