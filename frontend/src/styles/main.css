@@ -216,47 +216,44 @@ position: absolute;
     transform: none;
     transform-origin: top center;
   }
-  .overlay-lake {
-    width: 180px;
+  .sunset-image,
+  .tulum-image,
+  .overlay-australia,
+  .overlay-lake,
+  .jakarta,
+  .icy,
+  .LA {
     max-width: 100%;
     height: auto;
+    top: 10px;
+  }
+  .overlay-lake {
+    width: 180px;
     left: 40%;
   }
   .sunset-image {
     width: 200px;
-    max-width: 100%;
-    height: auto;
   }
   .jakarta {
     width: 110px;
-    max-width: 100%;
-    height: auto;
     left: 70%;
   }
   .icy {
     width: 110px;
-    max-width: 100%;
-    height: auto;
     left: 70%;
     top: 200px;
   }
   .tulum-image{
     width: 110px;
-    max-width: 100%;
-    height: auto;
     right: 10%;
   }
   .LA {
     width: 130px;
-    max-width: 100%;
-    height: auto;
     position: absolute;
     top: 35%;
   }
   .overlay-australia {
     width: 225px;
-    max-width: 100%;
-    height: auto;
     left: 0%;
   }
   .homepage-text {
@@ -268,6 +265,7 @@ position: absolute;
     transform: translate(-50%, -50%); /* true center */
     transform: rotate(-7deg);
     z-index: 15;
+    max-width: 50px;
 }
 }
 
