@@ -290,11 +290,15 @@ position: absolute;
 @media (max-width: 600px) and (orientation: portrait) {
   .homepage-text {
     position: absolute;
-    top: -20%; 
+    top: 15%; 
     left: 50%;
     transform: translate(-50%, -50%) rotate(-5deg);
     font-size: 22px;
     text-align: center;
+  }
+  body {
+    transform: scale(1.05); /* or try 1.1 */
+    transform-origin: top center;
   }
 }
 
