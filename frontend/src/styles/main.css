@@ -277,10 +277,7 @@ position: absolute;
     transform: scale(.8)
   }
   .image-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    overflow-x: hidden;
+    overflow-x: auto;
   }
 }
 
