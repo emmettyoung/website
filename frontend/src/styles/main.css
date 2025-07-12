@@ -227,10 +227,17 @@ position: absolute;
     max-width: 100%;
     height: auto;
   }
-  .LA, .icy, .jakarta, .tulum-image {
-    width: 105px;
+  .icy, .jakarta, .tulum-image {
+    width: 110px;
     max-width: 100%;
     height: auto;
+  }
+  .LA {
+    width: 110px;
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    top: 30%;
   }
 }
 
