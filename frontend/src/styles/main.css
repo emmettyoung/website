@@ -215,7 +215,7 @@ position: absolute;
   #root {
     transform: none;
     transform-origin: top center;
-    max-width: fit-content;
+    max-width: 400px;
   }
   .sunset-image,
   .tulum-image,
@@ -224,7 +224,7 @@ position: absolute;
   .jakarta,
   .icy,
   .LA {
-    transform: scale(.2);
+    transform: scale(.01);
   }
 }
 
