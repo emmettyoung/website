@@ -276,6 +276,9 @@ position: absolute;
   .sidebar {
     transform: scale(.8)
   }
+  .profile-header {
+    margin-top: 100px;
+  }
 }
 
 @media (max-width: 600px) and (orientation: landscape) {
