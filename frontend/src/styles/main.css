@@ -280,6 +280,7 @@ position: absolute;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    overflow-x: hidden;
   }
 }
 
