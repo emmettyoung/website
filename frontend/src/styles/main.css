@@ -310,17 +310,17 @@ position: absolute;
   .jakarta,
   .icy,
   .LA {
-    position: relative;
+    position: static;
     width: 45vw;
     max-width: 45vw;
     margin: 0;
     opacity: 1;
     animation: none;
-    left: 15px;
+    left: 50px;
   }
 
   #root {
-    transform: scale(0.2);
+    transform: scale(0.05);
     transform-origin: top center;
   }
 }
