@@ -100,17 +100,17 @@
 }
 
 .homepage-text {
-    position: absolute;
-    top: 43%;        /* vertically center-ish */
-    left: 43%;       /* horizontally center */
-    transform: translate(-50%, -50%); /* true center */
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 28px;
-    color: #000000;
-    z-index: 15; /* make sure it's above the images */
-    pointer-events: none;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-    transform: rotate(-7deg);
+  position: relative;
+  top: -210px;        /* vertically center-ish */
+  left: 5%;       /* horizontally center */
+  transform: translate(-50%, -50%); /* true center */
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 28px;
+  transform: rotate(-7deg);
+  z-index: 15; /* make sure it's above the images */
+  pointer-events: none;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  transform: rotate(-7deg);
 }
   
 a {
