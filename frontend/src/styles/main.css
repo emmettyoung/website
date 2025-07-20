@@ -300,15 +300,14 @@ position: absolute;
   }
 
   .LA {
-    position: fixed;
-    max-width: 100%;
+    position: absolute;
     margin: 0;
     opacity: 1;
-    left: 50%;
-    top: 60%;
+    left: 10%;
+    top: 40%;
   }
-
   #root {
     transform-origin: top center;
+    transform: none;
   }
 }
