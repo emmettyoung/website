@@ -282,21 +282,14 @@ position: absolute;
 }
 
 @media (max-width: 600px) and (orientation: landscape) {
-  .image-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    overflow-x: hidden;
-  }
 
   .sunset-image,
   .tulum-image,
   .overlay-australia,
   .overlay-lake,
   .jakarta,
-  .icy,
-  .LA {
+  .icy
+  {
     position: static;
     width: 45vw;
     max-width: 45vw;
@@ -306,8 +299,16 @@ position: absolute;
     left: 50px;
   }
 
+  .LA {
+    position: fixed;
+    max-width: 100%;
+    margin: 0;
+    opacity: 1;
+    left: 50%;
+    top: 60%;
+  }
+
   #root {
-    transform: scale(0.05);
     transform-origin: top center;
   }
 }
