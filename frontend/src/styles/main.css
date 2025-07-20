@@ -281,7 +281,7 @@ position: absolute;
   }
 }
 
-@media (max-width: 600px) and (orientation: landscape) {
+@media screen and (max-width: 600px) and (orientation: landscape) {
 
   .sunset-image,
   .tulum-image,
