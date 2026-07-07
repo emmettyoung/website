@@ -23,8 +23,8 @@ export const profileLinks: personalLinks = {
 
 export function SelectProfileLinks({ profileLinks }: profileLinksProps) {
   return (
-    <div className="profile-container">
-      <div className="profile">
+    <div>
+      <div>
       <a href={profileLinks.transcript} target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-500 underline">

@@ -1,13 +1,12 @@
-export interface projectLayout{
+export interface projectLayout {
     title: string;
     description: string;
     link: string;
 }
 
-export interface SelectInputProps {
-    setSelectedProject: (project: projectLayout | null) => void;
-    projects: projectLayout[]
-  }
+export interface ProjectGridProps {
+    projects: projectLayout[];
+}
 
 // TODO: add project descriptions
 export const projectList: projectLayout[] = [
@@ -56,28 +55,25 @@ export const noncodingProjects: projectLayout[] = [
     }
 ]
 
-export function SelectProject({setSelectedProject, projects}: SelectInputProps) {
-    
-    function handleSelect(inputProject: string) {
-        const selectedProject = projectList.find((p) => p.title == inputProject)
-        if (selectedProject) {
-            setSelectedProject(selectedProject)
-        }
-        else {
-            throw new Error("Selected table does not exist")
-        }
-    }
+// Renders a responsive grid of bordered project cards (max 3 per row on
+// desktop; see .project-grid in main.css for the column breakpoints).
+export function SelectProject({ projects }: ProjectGridProps) {
     return (
-        <ul className="project-containers mt-2 space-y-2">
+        <ul className="project-grid">
             {projects.map((project) => (
-         <li 
-            key={project.title} 
-            className="cursor-pointer p-2 bg-gray-200 rounded-md hover:bg-gray-300"
-            onClick={() => handleSelect(project.title)}
-        >
-            {project.title}
-        </li>
-        ))}
-    </ul>
+                <li key={project.title} className="project-card">
+                    <p className="project-card-title">{project.title}</p>
+                    <p className="project-card-description">{project.description}</p>
+                    <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-card-link"
+                    >
+                        {project.link.includes("github.com") ? "GitHub Repository" : "Project Link"}
+                    </a>
+                </li>
+            ))}
+        </ul>
     )
 }

@@ -1,16 +1,14 @@
 import '../styles/App.css';
-import Sidebar from './mainframe';
-import { projectList } from "./SelectProject";
+import Mainframe from './mainframe';
 
 /**
- * Mainframe perspective
+ * Root app component. Mainframe now owns all routing internally
+ * (see mainframe.tsx), so App is just a thin shell.
  */
 function App() {
   return (
     <div className="App">
-      <header className="homepage-container">
-      </header>
-      <Sidebar projects={projectList} />
+      <Mainframe />
     </div>
   );
 }

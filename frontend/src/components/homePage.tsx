@@ -1,19 +1,21 @@
-import { useEffect, useState } from "react";
-import sunset from './japan-sunset.jpeg';
-import tulum from './tulum.jpeg';
-import australia from './australia.jpeg';
-import lake from './lake.jpeg';
-import jakarta from './jakarta.jpeg';
-import icy from './icy.jpeg';
-import LA from './LA.jpeg';
+import { ReactNode, useEffect, useState } from "react";
+import { IconLink } from "./Iconlink";
+import { MailQuestionIcon, WandSparkles, Scissors, CircleDollarSign} from "lucide-react";
+import "../styles/main.css";
 
 export interface HomePage {
     welcomeText: string;
 }
 
+// The 4 top-level destinations from the homepage. Centralized here so
+const homeIcons: { label: string; to: string; icon?: ReactNode }[] = [
+    { label: "cool projects i've done", to: "/projects", icon: <WandSparkles size={32} /> },
+    { label: "cool ways to contact me", to: "/contact", icon: <MailQuestionIcon size={32} />},
+    { label: "cool stocks i've bought", to: "/stock-portfolio", icon: <CircleDollarSign size={32} /> },
+    { label: "cool clothes i've made", to: "/clothing-store", icon: <Scissors size={32} /> },
+];
 
-
-export function HomePage({ welcomeText = "Welcome to my website!" }: HomePage) {
+export function HomePage({ welcomeText = "welcome to my website!" }: HomePage) {
     const [displayed, setDisplayed] = useState("");
 
     useEffect(() => {
@@ -21,26 +23,26 @@ export function HomePage({ welcomeText = "Welcome to my website!" }: HomePage) {
         const interval = setInterval(() => {
           setDisplayed(welcomeText.substring(0, index + 1));
           index++;
-      
+
           if (index >= welcomeText.length) {
             clearInterval(interval);
           }
         }, 100);
-      
+
         return () => clearInterval(interval);
       }, [welcomeText]);
+
     return (
-        <div>
-            <div className="image-container">
-              <img className="sunset-image" src={sunset} alt="Sunset" width={450} height={300} />
-              <img className="tulum-image" src={tulum} alt="Tulum" width={210} height={280} />
-              <img className="overlay-australia" src={australia} alt="Australia" width={450} height={300} />
-              <img className="overlay-lake" src={lake} alt="Lake" width={360} height={270} />
-              <img className="jakarta" src={jakarta} alt="Jakarta" width={210} height={280} />
-              <img className="icy" src={icy} alt="Icy" width={210} height={280} />
-              <img className="LA" src={LA} alt="LA" width={210} height={280} />
+        <div className="homepage-container">
+            <p className="homepage-welcome-text">
+                {displayed}
+            </p>
+
+            <div className="icon-row">
+                {homeIcons.map((iconDef) => (
+                    <IconLink key={iconDef.to} label={iconDef.label} to={iconDef.to} icon={iconDef.icon} />
+                ))}
             </div>
-            <p className="homepage-text">{displayed}</p>
         </div>
     )
 }
