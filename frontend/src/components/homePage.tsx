@@ -10,7 +10,7 @@ export interface HomePage {
 // The 4 top-level destinations from the homepage. Centralized here so
 const homeIcons: { label: string; to: string; icon?: ReactNode }[] = [
     { label: "cool projects i've done", to: "/projects", icon: <WandSparkles size={32} /> },
-    { label: "cool ways to contact me", to: "/contact", icon: <MailQuestionIcon size={32} />},
+    { label: "cool things to about me", to: "/contact", icon: <MailQuestionIcon size={32} />},
     { label: "cool stocks i've bought", to: "/stock-portfolio", icon: <CircleDollarSign size={32} /> },
     { label: "cool clothes i've made", to: "/clothing-store", icon: <Scissors size={32} /> },
 ];

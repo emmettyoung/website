@@ -9,14 +9,14 @@ export default function ContactPage() {
 
   return (
     <div className="contact-page">
-      <ul className="contact-return-to-home">
-        back to home
-      </ul>
-      <StepBack
-        className="back-arrow"
-        size={28}
+      <div
+        className="contact-return-to-home"
         onClick={() => navigate("/")}
-      />
+      >
+        <StepBack size={28}/>
+        back to home
+      </div>
+
       <ul className="project-header">
         Contact Information
       </ul>

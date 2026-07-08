@@ -7,14 +7,13 @@ export default function ClothingStore() {
 
     return (
       <div className="clothing-store-page">
-        <ul className="contact-return-to-home">
-          back to home
-        </ul>
-        <StepBack
-          className="back-arrow"
-          size={28}
-          onClick={() => navigate("/")}
-        />
+        <div
+        className="contact-return-to-home"
+        onClick={() => navigate("/")}
+      >
+        <StepBack size={28}/>
+        back to home
+      </div>
         <ul className="project-header">
           cool things coming soon
         </ul>

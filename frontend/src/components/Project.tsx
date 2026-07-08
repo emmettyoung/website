@@ -8,14 +8,13 @@ export default function Project() {
 
   return (
     <div className="projects-page">
-      <ul className="contact-return-to-home">
+      <div
+        className="contact-return-to-home"
+        onClick={() => navigate("/")}
+      >
+        <StepBack size={28}/>
         back to home
-      </ul>
-      <StepBack
-        className="back-arrow"
-        size={28}
-        onClick={() => navigate('/')}
-      />
+      </div>
       <ul className="project-header">
         Coding Projects
       </ul>
