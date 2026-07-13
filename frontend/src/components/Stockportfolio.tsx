@@ -186,7 +186,7 @@ export default function StockPortfolio() {
           <div className="about-algo">
                 <details>
                   <summary>
-                    This algo takes into factors of RSI, different period growth rates, PE ratio, and AI driven market analytics to analyze a stocks anticipated performance.
+                    This algo takes into factors of RSI, different period growth rates, P/E ratio, P/B Ratio, Volume, and AI driven analytics to analyze a stocks anticipated performance.
                   </summary>
                 </details>
           </div>
