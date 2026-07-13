@@ -1,6 +1,9 @@
-repl/node_modules/
-repl/src/*.js
+node_modules/
+dist/
+build/
+.env
 .DS_Store
+repl/src/*.js
 repl/test-results/
 repl/playwright-report/
 repl/playwright/.cache/

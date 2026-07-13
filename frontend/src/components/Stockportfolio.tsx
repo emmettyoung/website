@@ -1,4 +1,4 @@
-import { StepBack } from "lucide-react";
+import { StepBack, Frown, Meh, Smile } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -30,6 +30,36 @@ ChartJS.register(
 interface PortfolioPoint {
     date: string;
     value: number;
+}
+
+const STARTING_VALUE = 1000;
+
+function getMoodStatus(currentValue: number | null) {
+
+    if (currentValue === null) {
+        return null;
+    }
+
+    const percentChange = ((currentValue - STARTING_VALUE) / STARTING_VALUE) * 100;
+
+    if (currentValue < STARTING_VALUE) {
+        return {
+            Icon: Frown,
+            label: "my stocks arent doing so good right now"
+        };
+    }
+
+    if (percentChange < 5) {
+        return {
+            Icon: Meh,
+            label: "my stocks are doing ok right now"
+        };
+    }
+
+    return {
+        Icon: Smile,
+        label: "my stocks are doing good right now"
+    };
 }
 
 
@@ -65,6 +95,9 @@ export default function StockPortfolio() {
         loadData();
 
     }, []);
+
+    const currentValue = history.length > 0 ? history[history.length - 1].value : null;
+    const mood = getMoodStatus(currentValue);
 
     const chartData = {
         labels: history.map(item => item.date),
@@ -112,14 +145,21 @@ export default function StockPortfolio() {
     return (
 
       <div className="stock-portfolio-page">
-  
-          <div
-              className="contact-return-to-home"
-              onClick={() => navigate("/")}
-          >
-              <StepBack size={28}/>
-              back to home
-          </div>
+
+              <div
+                  className="contact-return-to-home"
+                  onClick={() => navigate("/")}
+              >
+                  <StepBack size={28}/>
+                  back to home
+              </div>
+
+              {mood && (
+                  <div className="portfolio-mood">
+                      <mood.Icon size={28} />
+                      <span>{mood.label}</span>
+                  </div>
+              )}
 
           <div className="portfolio-container">
               <div className="portfolio-chart">
@@ -146,12 +186,8 @@ export default function StockPortfolio() {
           <div className="about-algo">
                 <details>
                   <summary>
-                    About This Algo
+                    This algo takes into factors of RSI, different period growth rates, PE ratio, and AI driven market analytics to analyze a stocks anticipated performance.
                   </summary>
-
-                  <p>
-                    to fill
-                  </p>
                 </details>
           </div>
       </div>
